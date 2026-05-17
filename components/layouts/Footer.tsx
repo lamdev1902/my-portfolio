@@ -8,7 +8,7 @@ export function Footer() {
 
           {/* LEFT */}
           <div className="flex flex-col gap-3">
-            <h1 className="font-special text-[56px] leading-none">
+            <h1 className="font-special text-[56px] leading-none text-white">
             L
           </h1>
             <p className="text-gray-400 text-sm max-w-sm leading-relaxed">
@@ -58,7 +58,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-white/10">
 
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Lam Truc. All rights reserved.
+            © {new Date().getFullYear()} Lam Nguyen. All rights reserved.
           </p>
 
           <p className="text-gray-500 text-sm">
