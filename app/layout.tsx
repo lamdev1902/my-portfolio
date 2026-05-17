@@ -7,8 +7,9 @@ import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
-  title: "L",
-  description: "Interactive portfolio and immersive digital experiences.",
+  title: "Lam Nguyen — Full Stack Developer",
+  description:
+    "Building modern web applications, immersive interfaces, and high-performance digital experiences with React, Next.js, TypeScript, and scalable backend systems.",
 };
 
 export default function RootLayout({
