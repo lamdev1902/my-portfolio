@@ -50,6 +50,7 @@ export default function TechStack() {
                 key={tech.name}
                 className="
                   group
+                  text-white
                   rounded-2xl sm:rounded-3xl
                   border border-white/10
                   bg-white/[0.03]
@@ -75,7 +76,7 @@ export default function TechStack() {
                       group-hover:scale-110
                     "
                   >
-                    <Icon />
+                    <Icon className="text-white" />
                   </div>
 
                   {/* NAME */}
