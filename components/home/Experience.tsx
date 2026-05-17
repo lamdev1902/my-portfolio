@@ -12,43 +12,64 @@ import "swiper/css/pagination";
 
 function chunkArray<T>(arr: T[], size: number) {
   const result: T[][] = [];
+
   for (let i = 0; i < arr.length; i += size) {
     result.push(arr.slice(i, i + size));
   }
+
   return result;
 }
 
 export default function ExperienceSection() {
-  const slides = chunkArray(experienceData, 4);
+  // mobile: 1 card
+  // tablet: 2 cards
+  // desktop: 4 cards
+  const slides =
+    typeof window !== "undefined" && window.innerWidth < 768
+      ? chunkArray(experienceData, 1)
+      : typeof window !== "undefined" && window.innerWidth < 1024
+        ? chunkArray(experienceData, 2)
+        : chunkArray(experienceData, 4);
 
   return (
     <section className="w-full">
-      <h2 className="text-2xl font-bold mb-6 text-white">
+      <h2 className="mb-6 text-2xl font-bold text-white">
         Work Experience
       </h2>
 
-      {/* WRAPPER controls spacing */}
       <div className="space-y-6">
-        <Swiper 
+        <Swiper
           slidesPerView={1}
           spaceBetween={20}
           modules={[Pagination]}
           pagination={{ clickable: true }}
-          className="pb-20"
+          className="pb-16"
         >
           {slides.map((group, index) => (
             <SwiperSlide key={index}>
-              <div className="grid grid-cols-2 grid-rows-2 gap-4">
+              <div
+                className="
+                  grid
+                  grid-cols-1
+                  gap-4
+                  sm:grid-cols-2
+                  lg:grid-cols-2
+                "
+              >
                 {group.map((item, i) => {
                   const card = (
-                    <Card className="h-full flex flex-col gap-3">
-                      <div className="text-2xl">{item.icon}</div>
-                      <h3 className="font-semibold text-white">
+                    <Card className="flex h-full min-h-[220px] flex-col gap-3">
+                      <div className="text-2xl">
+                        {item.icon}
+                      </div>
+
+                      <h3 className="text-lg font-semibold text-white">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-gray-400 leading-relaxed">
+
+                      <p className="text-sm leading-relaxed text-gray-400">
                         {item.description}
-                      </p> 
+                      </p>
                     </Card>
                   );
 
@@ -75,8 +96,7 @@ export default function ExperienceSection() {
           ))}
         </Swiper>
 
-        {/* dots area - tạo khoảng cách rõ ràng */}
-        <div className="flex justify-center pt-6">
+        <div className="flex justify-center pt-2">
           <style jsx global>{`
             .swiper-pagination {
               position: relative !important;
