@@ -32,7 +32,7 @@ export default function ExperienceSection() {
         : chunkArray(experienceData, 4);
 
   return (
-    <section className="w-full">
+    <section className="w-full" id="experience">
       <h2 className="mb-6 text-2xl font-bold text-white">
         Work Experience
       </h2>

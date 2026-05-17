@@ -25,6 +25,9 @@ export function Footer() {
               <span className="text-white text-sm font-medium">
                 Navigation
               </span>
+              <a href="#tech" className="text-gray-400 text-sm hover:text-white transition">
+                TechStack
+              </a>
               <a href="#experience" className="text-gray-400 text-sm hover:text-white transition">
                 Experience
               </a>
@@ -40,9 +43,6 @@ export function Footer() {
               <span className="text-white text-sm font-medium">
                 Social
               </span>
-              <a href="https://github.com" target="_blank" className="text-gray-400 text-sm hover:text-white transition">
-                GitHub
-              </a>
               <a href="https://www.linkedin.com/in/lam-nguyen-2822ab248/" target="_blank" className="text-gray-400 text-sm hover:text-white transition">
                 LinkedIn
               </a>

@@ -4,7 +4,7 @@ import { technologies } from "@/components/features/technologies/data/technology
 
 export default function TechStack() {
   return (
-    <section className="py-16 sm:py-20 lg:py-28">
+    <section id="tech" className="py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* HEADER */}
         <div className="mb-12 text-center sm:mb-16">

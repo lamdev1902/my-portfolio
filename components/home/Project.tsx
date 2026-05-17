@@ -26,7 +26,7 @@ const projects = [
 
 export default function ProjectSection() {
   return (
-    <section className="w-full py-16 sm:py-20 lg:py-24">
+    <section className="w-full py-16 sm:py-20 lg:py-24" id="projects">
       {/* HEADER */}
       <div className="mb-12 text-center sm:mb-16">
         <p

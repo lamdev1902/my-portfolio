@@ -53,7 +53,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="w-full relative">
+    <section className="w-full relative" id="contact">
 
       {/* TITLE */}
       <div className="mb-10 text-center">
